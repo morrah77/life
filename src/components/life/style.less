@@ -1,0 +1,30 @@
+@import "../../styles/base";
+.container {
+  margin: auto;
+  background-color: @color-white;
+}
+.Life {
+  border: @border-common;
+  .row {
+    margin: 0;
+    padding: 0;
+    border: none;
+    display: block;
+    font-size: 0;
+    .cell {
+      width: 5px;
+      height: 5px;
+      display: inline-block;
+      border: @border-common;
+      margin: 0;
+      padding: 0;
+      background-color: @color-black;
+      &[alive=true] {
+        background-color: @color-green;
+      }
+    }
+  }
+  button {
+    margin: 10px;
+  }
+}

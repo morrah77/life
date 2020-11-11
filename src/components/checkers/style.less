@@ -1,0 +1,57 @@
+@import "../../styles/base";
+
+.container {
+}
+.App {
+  .board {
+    display: block;
+    line-height: 0;
+    font-size: 0;
+    width: 240px;
+    margin: 0;
+    padding: 0;
+    .cell {
+      font-size: 0;
+      line-height: 0;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      margin: 0;
+      padding: 0;
+      border: none;
+      position: relative;
+      &.white {
+        background-color: @color-white;
+      }
+      &.black {
+        background-color: @color-black;
+      }
+      &.checked {
+        &:before {
+          content: 'C';
+          position: absolute;
+          display: block;
+          margin: 0;
+          padding: 0;
+          width: 30px;
+          height: 30px;
+          color: green;
+          font-size: 16px;
+          line-height: 0;
+        }
+      }
+      &.checked-white {
+        &:before {
+          content: 'W';
+          color: red;
+        }
+      }
+      &.checked-black {
+        &:before {
+          content: 'B';
+          color: blue;
+        }
+      }
+    }
+  }
+}
